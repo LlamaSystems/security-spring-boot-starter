@@ -6,9 +6,9 @@
 
     <groupId>io.github.aliabbosashurov</groupId>
     <artifactId>openapi-spring-boot-starter</artifactId>
-    <version>1.0.0</version>
+    <version>2.0.0</version>
 
-    <name>open-endpoints-spring-boot-starter</name>
+    <name>Open API Spring Boot Starter</name>
     <description>
         A lightweight Spring Boot starter library to configure public (open) API endpoints
         via YAML or properties files. Supports path patterns, HTTP methods, and optional
@@ -39,16 +39,14 @@
     </scm>
 
     <properties>
-        <java.version>21</java.version>
-        <spring.version>6.2.10</spring.version>
-        <spring.security.version>6.5.3</spring.security.version>
-        <spring-boot.version>3.5.5</spring-boot.version>
+        <java.version>25</java.version>
+        <spring.version>7.0.3</spring.version>
+        <spring.security.version>7.0.2</spring.security.version>
+        <spring-boot.version>4.0.1</spring-boot.version>
         <jakarta.version>6.1.0</jakarta.version>
         <slf4j.version>2.0.17</slf4j.version>
         <jspecify.version>1.0.0</jspecify.version>
-        <lombok.version>1.18.34</lombok.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -89,13 +87,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
             <version>${spring-boot.version}</version>
@@ -110,14 +101,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                     <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </path>
                         <path>
                             <groupId>org.jspecify</groupId>
                             <artifactId>jspecify</artifactId>
@@ -175,7 +160,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
-                <version>3.2.7</version>
+                <version>3.2.8</version>
                 <executions>
                     <execution>
                         <id>sign-artifacts</id>
