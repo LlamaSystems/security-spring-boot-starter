@@ -1,4 +1,4 @@
-package io.github.aliabbosashurov.open.api;
+package io.github.llamasystems.security;
 
 import org.jspecify.annotations.NonNull;
 import org.springframework.http.HttpMethod;
@@ -29,18 +29,18 @@ public final class ApiRequest {
         return new String[]{ "/**" };
     }
 
-    /// Matches endpoints configured as open (public) dynamically from [OpenApiProperties].
+    /// Matches endpoints configured as open (public) dynamically from [SecurityProperties].
     ///
-    /// @param properties Supplier of [OpenApiProperties] for runtime configuration
+    /// @param properties Supplier of [SecurityProperties] for runtime configuration
     /// @return a RequestMatcher that matches all enabled open endpoints
     @NonNull
-    public static RequestMatcher toOpenEndpoints(Supplier<OpenApiProperties> properties) {
-        List<OpenApiProperties.OpenEndpoint> endpoints = properties.get().openEndpoints();
+    public static RequestMatcher toOpenEndpoints(Supplier<SecurityProperties> properties) {
+        List<SecurityProperties.OpenEndpoint> endpoints = properties.get().openEndpoints();
 
         if (endpoints.isEmpty()) return EMPTY_MATCHER;
 
         List<RequestMatcher> matchers = endpoints.stream()
-                .filter(OpenApiProperties.OpenEndpoint::enabled)
+                .filter(SecurityProperties.OpenEndpoint::enabled)
                 .flatMap(endpoint -> {
                     List<String> methods = endpoint.methods();
                     if (methods.isEmpty() || methods.contains("ALL")) {

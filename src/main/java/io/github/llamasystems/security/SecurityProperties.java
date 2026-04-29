@@ -1,4 +1,4 @@
-package io.github.aliabbosashurov.open.api;
+package io.github.llamasystems.security;
 
 import org.jspecify.annotations.NonNull;
 import org.jspecify.annotations.Nullable;
@@ -12,7 +12,7 @@ import java.util.List;
 ///
 /// @author Aliabbos Ashurov
 @ConfigurationProperties(prefix = "app.security.api")
-public record OpenApiProperties(
+public record SecurityProperties(
         /// Whether Open API support is enabled in the application. Default is true.
         @DefaultValue("true") boolean enabled,
 
@@ -20,9 +20,7 @@ public record OpenApiProperties(
         @NonNull List<OpenEndpoint> openEndpoints
 ) {
 
-    /**
-     * Represents a single open (public) API endpoint configuration.
-     */
+    /// Represents a single open (public) API endpoint configuration.
     public record OpenEndpoint(
             /// Path pattern of the endpoint. Supports wildcards.
             @NonNull String path,

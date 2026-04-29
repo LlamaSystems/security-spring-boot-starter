@@ -4,17 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.aliabbosashurov</groupId>
-    <artifactId>openapi-spring-boot-starter</artifactId>
+    <groupId>io.github.llamasystems</groupId>
+    <artifactId>security-spring-boot-starter</artifactId>
     <version>2.0.0</version>
 
-    <name>Open API Spring Boot Starter</name>
+    <name>Security Spring Boot Starter</name>
     <description>
         A lightweight Spring Boot starter library to configure public (open) API endpoints
         via YAML or properties files. Supports path patterns, HTTP methods, and optional
         descriptions, enabling easy integration with Spring Security's request matchers.
     </description>
-    <url>https://github.com/aliabbosashurov/openapi-spring-boot-starter.git</url>
+    <url>https://github.com/llamasystems/security-spring-boot-starter.git</url>
 
     <licenses>
         <license>
@@ -32,17 +32,17 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/aliabbosashurov/openapi-spring-boot-starter.git</connection>
-        <developerConnection>scm:git:ssh://github.com/aliabbosashurov/openapi-spring-boot-starter.git
+        <connection>scm:git:git://github.com/llamasystems/security-spring-boot-starter.git</connection>
+        <developerConnection>scm:git:ssh://github.com/llamasystems/security-spring-boot-starter.git
         </developerConnection>
-        <url>https://github.com/aliabbosashurov/openapi-spring-boot-starter</url>
+        <url>https://github.com/llamasystems/security-spring-boot-starter</url>
     </scm>
 
     <properties>
         <java.version>25</java.version>
-        <spring.version>7.0.3</spring.version>
-        <spring.security.version>7.0.2</spring.security.version>
-        <spring-boot.version>4.0.1</spring-boot.version>
+        <spring.version>7.0.7</spring.version>
+        <spring.security.version>7.0.5</spring.security.version>
+        <spring-boot.version>4.0.6</spring-boot.version>
         <jakarta.version>6.1.0</jakarta.version>
         <slf4j.version>2.0.17</slf4j.version>
         <jspecify.version>1.0.0</jspecify.version>

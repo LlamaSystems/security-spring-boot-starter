@@ -4,38 +4,38 @@
       "name": "app.security.api.enabled",
       "type": "java.lang.Boolean",
       "description": "Whether Open API support is enabled in the application.",
-      "sourceType": "io.github.aliabbosashurov.open.api.OpenApiProperties",
+      "sourceType": "io.github.llamasystems.security.SecurityProperties",
       "defaultValue": true
     },
     {
       "name": "app.security.api.open-endpoints",
-      "type": "java.util.List<io.github.aliabbosashurov.open.api.OpenApiProperties$OpenEndpoint>",
+      "type": "java.util.List<io.github.llamasystems.security.SecurityProperties>",
       "description": "List of endpoints that are accessible without authentication.",
-      "sourceType": "io.github.aliabbosashurov.open.api.OpenApiProperties"
+      "sourceType": "io.github.llamasystems.security.SecurityProperties"
     },
     {
       "name": "app.security.api.open-endpoints[].description",
       "type": "java.lang.String",
       "description": "Optional description of the endpoint for documentation purposes.",
-      "sourceType": "io.github.aliabbosashurov.open.api.OpenApiProperties$OpenEndpoint"
+      "sourceType": "io.github.llamasystems.security.SecurityProperties$OpenEndpoint"
     },
     {
       "name": "app.security.api.open-endpoints[].enabled",
       "type": "java.lang.Boolean",
       "description": "Whether this endpoint is enabled. Disabled endpoints are ignored by the security matcher.",
-      "sourceType": "io.github.aliabbosashurov.open.api.OpenApiProperties$OpenEndpoint"
+      "sourceType": "io.github.llamasystems.security.SecurityProperties$OpenEndpoint"
     },
     {
       "name": "app.security.api.open-endpoints[].methods",
       "type": "java.util.List<java.lang.String>",
       "description": "HTTP methods allowed for this endpoint. Default is ALL methods if omitted or empty.",
-      "sourceType": "io.github.aliabbosashurov.open.api.OpenApiProperties$OpenEndpoint"
+      "sourceType": "io.github.llamasystems.security.SecurityProperties$OpenEndpoint"
     },
     {
       "name": "app.security.api.open-endpoints[].path",
       "type": "java.lang.String",
       "description": "Path pattern of the endpoint. Supports wildcards (/**).",
-      "sourceType": "io.github.aliabbosashurov.open.api.OpenApiProperties$OpenEndpoint"
+      "sourceType": "io.github.llamasystems.security.SecurityProperties$OpenEndpoint"
     }
   ],
   "hints": [
