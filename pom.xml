@@ -33,49 +33,52 @@
 
     <scm>
         <connection>scm:git:git://github.com/llamasystems/security-spring-boot-starter.git</connection>
-        <developerConnection>scm:git:ssh://github.com/llamasystems/security-spring-boot-starter.git
-        </developerConnection>
+        <developerConnection>scm:git:ssh://github.com/llamasystems/security-spring-boot-starter.git</developerConnection>
         <url>https://github.com/llamasystems/security-spring-boot-starter</url>
     </scm>
 
     <properties>
-        <java.version>25</java.version>
-        <spring.version>7.0.7</spring.version>
-        <spring.security.version>7.0.5</spring.security.version>
-        <spring-boot.version>4.0.6</spring-boot.version>
-        <jakarta.version>6.1.0</jakarta.version>
-        <slf4j.version>2.0.17</slf4j.version>
+        <java.version>17</java.version>
+        <spring-boot.version>3.5.15</spring-boot.version>
         <jspecify.version>1.0.0</jspecify.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>${spring-boot.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>${jakarta.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
-            <version>${spring.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
-            <version>${spring.security.version}</version>
             <scope>provided</scope>
         </dependency>
 
@@ -89,7 +92,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <version>${spring-boot.version}</version>
             <optional>true</optional>
         </dependency>
     </dependencies>
@@ -116,6 +118,7 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
